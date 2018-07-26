@@ -1,0 +1,22 @@
+{
+  "name": "Theme creator theme",
+  "about_url": "https://meta.discourse.org/t/84942/",
+  "license_url": "https://github.com/hnb-ku/discourse_theme_creator_theme/blob/master/LICENSE",
+   "assets": {
+        "theme-creator": "assets/theme-creator.svg"
+   },
+   "color_schemes": {
+       "theme creator": {
+          "primary": "222222",
+          "secondary": "ffffff",
+          "tertiary": "0088cc",
+          "quaternary": "a7414a",
+          "header_background": "ffffff",
+          "header_primary": "444444",
+          "highlight": "dddddd",
+          "danger": "ad0516",
+          "success": "7ebc59",
+          "love": "fa6c8d"
+        }
+    }
+}
