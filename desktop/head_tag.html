@@ -1,0 +1,45 @@
+<script type="text/discourse-plugin" version="0.8.14">
+api.onPageChange((url) => {
+    if (url != '/' && url != '/latest' && url != '/top' && url != '/categories' ||  url.match(/^\/t\//)) {
+        $('.hero').addClass('remove');
+    }
+    if (url === '/' || url === '/latest' || url === '/top' || url === '/categories') {
+       $('.hero').removeClass('remove');
+    }
+});
+
+$(document).ready(function() {
+  $("#create-theme").click(function() {
+    require('discourse/lib/url').default.routeTo(jQuery(event.currentTarget).attr('href'));
+    return false;
+  });
+});
+</script>
+
+<script type="text/x-handlebars" data-template-name="/connectors/below-site-header/theme_creator_header">
+    <div class="hero">
+    	<div class="header wrap">
+    	    <div class="inner">
+        		<div class="first">
+        			<h1 class="">Welcome to Theme Creator!</h1>
+        		</div>
+        		<div class="second">
+        			<p>Creating themes and color schemes has never been easier! All you need to do is login with your <a href="https://meta.discourse.org">meta.discourse.org</a> account and you'll have access to the theme editor without installing Discourse. Once your theme is ready, sharing it is as easy as clicking the share button in the editor. There's a world of possibilities and we can't wait to see what you come up with. What are you waiting for?</p>
+        		</div>
+        		<div class="third">
+                      <a href="/my/themes" id="create-theme" class="hidden create_theme btn btn-default btn btn-icon-text btn-primary">
+                         <span class="d-button-label">My Themes</span>
+                      </a>
+                      <a href="https://meta.discourse.org/t/theme-creator-create-and-show-themes-without-installing-discourse/84942" class="learn_more btn btn-default btn btn-icon-text btn-flat">
+                         <span class="d-button-label">Learn more</span>
+                      </a>
+        		</div>
+    		</div>
+    	</div>
+    	<div class="svg svg_1"></div>
+    	<div class="svg svg_2"></div>
+    	<div class="svg svg_3"></div>
+    	<div class="svg svg_4"></div>
+    </div>
+</script>
+
